@@ -4,7 +4,7 @@ describe('Search', function() {
     renderIntoDocument,
     findRenderedDOMComponentWithClass,
     scryRenderedDOMComponentsWithClass
-  } = React.addons.TestUtils;
+  } = ReactTestUtils;
 
   let app;
   let searchYouTubeStub;
