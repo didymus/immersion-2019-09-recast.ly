@@ -8,6 +8,6 @@ const searchYouTube = ({key = YOUTUBE_API_KEY, query = '', max = 5}, callback) =
     videoEmbeddable: 'true'
   }).done(data => callback(data.items))
     .fail(err => console.log('GET failed', err));
-};
+}; // the GET request for the Google YouTube API
 
 window.searchYouTube = searchYouTube;

@@ -32,21 +32,22 @@ class App extends React.Component {
     );
   }
   
-  return ( <div>
-    <nav className="navbar">
-      <div className="col-md-6 offset-md-3">
-        // update with new search function
-      </div>
-    </nav>
-    <div className="row">
-      <div className="col-md-7">
-        // update with new video player
-      </div>
-      <div className="col-md-5">
-        // update with new video list
+  return ( 
+    <div>
+      <nav className="navbar">
+        <div className="col-md-6 offset-md-3">
+          // update with new search function
+        </div>
+      </nav>
+      <div className="row">
+        <div className="col-md-7">
+          // update with new video player
+        </div>
+        <div className="col-md-5">
+          // update with new video list
+        </div>
       </div>
     </div>
-  </div>
   );
 
 };
