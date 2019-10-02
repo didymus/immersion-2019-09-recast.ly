@@ -4,7 +4,7 @@ describe('App', function() {
     renderIntoDocument,
     findRenderedDOMComponentWithClass,
     scryRenderedDOMComponentsWithClass
-  } = React.addons.TestUtils;
+  } = ReactTestUtils;
 
   let app;
 
