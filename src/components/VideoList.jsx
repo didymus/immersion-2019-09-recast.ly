@@ -6,7 +6,7 @@ const VideoList = () => (
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
     <div><h5><em>videoListEntry</em> view goes here</h5></div>
   </div>
-);
+); // map through the videos here after setting up onClick
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
