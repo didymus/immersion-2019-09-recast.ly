@@ -3,19 +3,19 @@ class App extends React.Component {
     super();
 
     this.state = {
-      videoList: [], // array?
-      currentVideo: null // this might be right
+      videoList: [],
+      currentVideo: null
     };
 
     // probably have to put something else here using decontruction
   }
   
-  changeVideo(video){
-    // set state
+  updateVideo(video){
+    this.setState({currentVideo: video});
   }
 
   updateVideoList(videos){
-    // set state
+    this.setState({videoList: videos});
   }
 
   render(){
