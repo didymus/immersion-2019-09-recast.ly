@@ -7,8 +7,6 @@ class Search extends React.Component {
   }
 
   searchVideos(event){
-    event.preventDefault();
-    event.stopPropagation();
     window.searchYouTube({query: this.state.term}, this.props.searchCallback);
   }
 

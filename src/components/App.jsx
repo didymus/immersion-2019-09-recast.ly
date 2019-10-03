@@ -7,7 +7,7 @@ class App extends React.Component {
       currentVideo: null
     };
 
-  window.searchYouTube({query: 'simulation theory'}, videos => {
+    window.searchYouTube({query: 'jean baudrillard'}, videos => {
     this.setState({
       videoList: videos.slice(1),
       currentVideo: videos[0]
@@ -32,7 +32,6 @@ class App extends React.Component {
             <Search searchCallback={this.updateVideoList.bind(this)} />
           </div>
         </nav>
-        <div>Loading...</div>
       </div>
     );
   }
@@ -53,7 +52,7 @@ class App extends React.Component {
         </div>
       </div>
     </div>
-  );
+    );
   }
 };
 
