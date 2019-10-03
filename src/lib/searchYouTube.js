@@ -1,4 +1,4 @@
-const searchYouTube = (options, callback) => { // check this shit later
+const searchYouTube = (options, callback) => {
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
     key: options.key,
