@@ -1,4 +1,4 @@
-const searchYouTube = ({key = YOUTUBE_API_KEY, query = '', max = 5}, callback) => {
+const searchYouTube = ({key = YOUTUBE_API_KEY, query = '', max = 5}, callback) => { // check this shit later
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
     key: key,

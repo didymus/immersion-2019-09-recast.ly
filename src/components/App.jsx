@@ -1,46 +1,39 @@
 class App extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state = {
       videoList: [],
-      currentVideo: null
+      currentVideo: {snippet: {title: '', description: ''}, id: {videoId: ''}}
     };
 
+    // default search
     window.searchYouTube({query: 'jean baudrillard'}, videos => {
     this.setState({
+      // don't show first video in list
       videoList: videos.slice(1),
+      // display first video in player
       currentVideo: videos[0]
     });
   });
   }
-  
+  // updates video
   updateVideo(video){
+    // set state of currentVideo
     this.setState({currentVideo: video});
   }
-
+  // updates video list
   updateVideoList(videos){
+    // set state of videoList
     this.setState({videoList: videos});
   }
 
-  render(){
-    if(this.state.currentVideo === null){  
-    return (
-      <div>
-        <nav className="navbar">
-          <div className="col-md-6 offset-md-3">
-            <Search searchCallback={this.updateVideoList.bind(this)} />
-          </div>
-        </nav>
-      </div>
-    );
-  }
-  
+  render(){  
   return ( 
     <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          <Search searchCallback={this.updateVideoList.bind(this)} />
+          <Search callback={this.updateVideoList.bind(this)} />
         </div>
       </nav>
       <div className="row">
