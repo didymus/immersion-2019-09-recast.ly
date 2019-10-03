@@ -7,7 +7,12 @@ class App extends React.Component {
       currentVideo: null
     };
 
-    // probably have to put something else here using decontruction
+  this.window.searchYouTube({query: ''}, videos => {
+    this.setState({
+      videoList: videos.slice(1),
+      currentVideo: videos[0]
+    });
+  });
   }
   
   updateVideo(video){
@@ -19,12 +24,12 @@ class App extends React.Component {
   }
 
   render(){
-    // probably some kind of if then...  
+    if(this.state.currentVideo){  
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            {/* put search here */}
+            {/* put search here somehow */}
           </div>
         </nav>
       <div>Loading...</div>
@@ -36,20 +41,20 @@ class App extends React.Component {
     <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          // update with new search function
+          /* still not sure yet what to put here */
         </div>
       </nav>
       <div className="row">
         <div className="col-md-7">
-          // update with new video player
+          <VideoPlayer video={this.state.currentVideo} />
         </div>
         <div className="col-md-5">
-          // update with new video list
+          <VideoList videos={this.state.videoList} onClick={this.updateVideo.bind(this)} />
         </div>
       </div>
     </div>
   );
-
+  }
 };
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
