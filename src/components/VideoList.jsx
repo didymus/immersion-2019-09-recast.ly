@@ -1,9 +1,10 @@
 const VideoList = (props) => (
+
   <div className="video-list">
     {props.videos.map(video => (
       <VideoListEntry key={video.id.videoId} video={video} onClick={props.onClick} />
-    ))}
-  </div>
+      ))}
+      </div>
 );
 
 // PropTypes tell other developers what `props` a component expects

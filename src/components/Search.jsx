@@ -6,18 +6,21 @@ class Search extends React.Component {
     };
   }
 
-  search(){
+  searchVideos(event){
+    event.preventDefault();
+    event.stopPropagation();
     window.searchYouTube({query: this.state.term}, this.props.searchCallback);
   }
 
   render(){
     return (
-  <div className="search-bar form-inline" onSubmit={this.search.bind(this)}>
-    <input className="form-control" type="text" />
+  <form className="search-bar form-inline" onSubmit={this.searchVideos.bind(this)}>
+    <input className="form-control" type="text" 
+    onChange={event => this.setState({term: event.target.value})} />
     <button className="btn hidden-sm-down" type="submit">
       <span className="glyphicon glyphicon-search"></span>
     </button>
-  </div>
+  </form>
     );
   }
 }
