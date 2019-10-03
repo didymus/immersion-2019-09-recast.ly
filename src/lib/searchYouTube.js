@@ -1,9 +1,9 @@
-const searchYouTube = ({key = YOUTUBE_API_KEY, query = '', max = 5}, callback) => { // check this shit later
+const searchYouTube = (options, callback) => { // check this shit later
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
-    key: key,
-    q: query,
-    maxResults: max,
+    key: options.key,
+    q: options.query,
+    maxResults: options.max,
     type: 'video',
     videoEmbeddable: 'true'
   }).done(data => callback(data.items))

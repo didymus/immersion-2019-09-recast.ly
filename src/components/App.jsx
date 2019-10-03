@@ -8,7 +8,7 @@ class App extends React.Component {
     };
 
     // default search
-    window.searchYouTube({query: 'jean baudrillard'}, videos => {
+    props.searchYouTube({key: window.YOUTUBE_API_KEY, max: 5, query: 'jean baudrillard'}, videos => {
     this.setState({
       // don't show first video in list
       videoList: videos.slice(1),

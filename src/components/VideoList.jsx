@@ -11,7 +11,7 @@ const VideoList = (props) => (
 // Warnings will be shown in the console when the defined rules are violated
 VideoList.propTypes = {
   videos: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope.
