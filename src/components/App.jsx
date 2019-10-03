@@ -7,7 +7,7 @@ class App extends React.Component {
       currentVideo: null
     };
 
-  this.window.searchYouTube({query: 'simulation theory'}, videos => {
+  window.searchYouTube({query: 'simulation theory'}, videos => {
     this.setState({
       videoList: videos.slice(1),
       currentVideo: videos[0]
@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   render(){
-    if(this.state.currentVideo){  
+    if(this.state.currentVideo === null){  
     return (
       <div>
         <nav className="navbar">
