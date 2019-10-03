@@ -29,10 +29,10 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            {/* put search here somehow */}
+            <Search FIX_ME_PLEASE={this.updateVideoList.bind(this)} />
           </div>
         </nav>
-      <div>Loading...</div>
+        <div>Loading...</div>
       </div>
     );
   }
@@ -41,7 +41,7 @@ class App extends React.Component {
     <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          /* still not sure yet what to put here */
+          <Search FIX_ME_PLEASE={this.updateVideoList.bind(this)} />
         </div>
       </nav>
       <div className="row">
