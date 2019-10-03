@@ -2,7 +2,7 @@ describe('VideoListEntry', function() {
   const {
     renderIntoDocument,
     findRenderedDOMComponentWithClass
-  } = React.addons.TestUtils;
+  } = ReactTestUtils;
 
   let cuteCatVideo;
   let superCuteCatVideo;

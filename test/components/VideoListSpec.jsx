@@ -1,5 +1,5 @@
 describe('VideoList', function() {
-  const { createRenderer } = React.addons.TestUtils;
+  const { createRenderer } = ReactShallowRenderer;
 
   // When testing a React component that renders other nested components,
   // it's a common practice to "shallow render" the component, or render
