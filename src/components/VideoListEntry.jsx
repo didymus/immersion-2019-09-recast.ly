@@ -1,4 +1,4 @@
-const VideoListEntry = () => (
+const VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg" />
