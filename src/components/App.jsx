@@ -7,7 +7,7 @@ class App extends React.Component {
       currentVideo: null
     };
 
-  this.window.searchYouTube({query: ''}, videos => {
+  this.window.searchYouTube({query: 'simulation theory'}, videos => {
     this.setState({
       videoList: videos.slice(1),
       currentVideo: videos[0]
@@ -29,7 +29,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Search FIX_ME_PLEASE={this.updateVideoList.bind(this)} />
+            <Search searchCallback={this.updateVideoList.bind(this)} />
           </div>
         </nav>
         <div>Loading...</div>
@@ -41,7 +41,7 @@ class App extends React.Component {
     <div>
       <nav className="navbar">
         <div className="col-md-6 offset-md-3">
-          <Search FIX_ME_PLEASE={this.updateVideoList.bind(this)} />
+          <Search searchCallback={this.updateVideoList.bind(this)} />
         </div>
       </nav>
       <div className="row">
